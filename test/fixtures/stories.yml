@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  story: MyString
+  continent_id: 
+  country_id: 
+  mail: MyString
+  rating: 
+
+two:
+  title: MyString
+  story: MyString
+  continent_id: 
+  country_id: 
+  mail: MyString
+  rating: 

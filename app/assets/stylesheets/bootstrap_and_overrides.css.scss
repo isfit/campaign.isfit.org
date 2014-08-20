@@ -1,3 +1,34 @@
 html body {
 	background-color: #223666;
 }
+
+@media screen and (min-width: 640px){
+  /* size: 540 */
+  .m430{width:640px}
+.m430 .continents,.m430 .continents .bg,.m430 .continents-cities{background:transparent url('c-430.png') no-repeat -1230px 0}
+/* etc. */
+  .m430 .c1.focus .bg,.m430 .c1.active-region .bg{height:47px;left:232px;top:68px;width:27px}
+.m430 .c1 /* etc. */
+  .m430 .c1 a{left:253px;top:101px}
+.m430 .c2 a{left:112px;top:205px}
+ }
+
+@media screen and (min-width: 750px){
+  /* size: 750 */
+  .m960{width:750px}
+.m960 .continents,.m960 .continents .bg,.m960 .continents-cities{background:transparent url('c-750.png') no-repeat -890px 0}
+/* etc. */
+  .m960 .c1.focus .bg,.m960 .c1.active-region .bg{height:70px;left:353px;top:107px;width:40px}.m960 .c1 /* etc. */
+  .m960 .c1 a{left:380px;top:151px}
+.m960 .c2 a{left:168px;top:308px}
+ }
+
+@media screen and (min-width: 992px){
+  /* size: 960 */
+  .m960{width:960px}
+.m960 .continents,.m960 .continents .bg,.m960 .continents-cities{background:transparent url('c-960.png') no-repeat -1106px 0}
+/* etc. */
+  .m960 .c1.focus .bg,.m960 .c1.active-region .bg{height:93px;left:464px;top:136px;width:53px}.m960 .c1 /* etc. */
+  .m960 .c1 a{left:497px;top:192px}
+.m960 .c2 a{left:214px;top:403px}
+ }
