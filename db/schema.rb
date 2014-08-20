@@ -27,17 +27,19 @@ ActiveRecord::Schema.define(version: 20140815124625) do
   end
 
   create_table "stories", force: true do |t|
-    t.string   "title"
+    t.string   "author"
     t.text     "story"
     t.integer  "continent_id"
-    t.integer  "country_id"
-    t.string   "mail"
+    t.integer  "author_nationality_id"
+    t.integer  "happened_in_id"
+    t.string   "email"
     t.integer  "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "stories", ["author_nationality_id"], name: "index_stories_on_author_nationality_id", using: :btree
   add_index "stories", ["continent_id"], name: "index_stories_on_continent_id", using: :btree
-  add_index "stories", ["country_id"], name: "index_stories_on_country_id", using: :btree
+  add_index "stories", ["happened_in_id"], name: "index_stories_on_happened_in_id", using: :btree
 
 end
