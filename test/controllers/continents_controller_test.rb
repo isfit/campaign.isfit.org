@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ContinentControllerTest < ActionController::TestCase
+class ContinentsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success

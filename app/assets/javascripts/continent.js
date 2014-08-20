@@ -1,6 +1,6 @@
 function onClickFunction(listItem) {
-	console.log('jo');
-	console.log(listItem);
+
+
 }
 
 
@@ -23,9 +23,23 @@ ready = function(){
       console.log(link);
 
      	if (link === '#africa') {
-     		console.log('lol');
-     		window.location= "http://no.wikipedia.org/wiki/Ebola_(virus)";
+        window.location= '/continents/1';
      	}
+      if (link === '#asia') {
+        window.location= '/continents/2';
+      }
+      if (link === '#australia') {
+        window.location= '/continents/3';
+      }
+      if (link === '#europe') {
+        window.location= '/continents/4';
+      }
+      if (link === '#north-america') {
+        window.location= '/continents/5';
+      }
+      if (link === '#south-america') {
+        window.location= '/continents/6';
+      }
      }
    });
 }

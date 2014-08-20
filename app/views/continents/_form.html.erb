@@ -1,0 +1,11 @@
+
+<div class='col-md-6 text-center'>
+<h1>Velkommen!</h1>
+</div>
+
+<%= form_for :story, url: story_create_path do |f| %>
+	<p>
+		<%= f.label :author %><br>
+		<%= f.text_field :author %>
+	</p>
+<% end %>
