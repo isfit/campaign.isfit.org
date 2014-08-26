@@ -1,3 +1,3 @@
 class Continent < ActiveRecord::Base
-	has_one :story
+	has_many :stories
 end

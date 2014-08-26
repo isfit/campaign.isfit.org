@@ -42,4 +42,6 @@ gem 'spring',        group: :development
 
 # Create pages in views
 gem 'will_paginate-bootstrap'
+gem 'pry'
+gem 'thin'
 

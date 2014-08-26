@@ -4,7 +4,7 @@ class ContinentsController < ApplicationController
 
   def show
   	@continent = Continent.find(params[:id])
-  	@stories = @continent.story
+  	@stories = @continent.stories.order("created_at DESC").page(params[:page]).per_page(5)
   end
 
 end
