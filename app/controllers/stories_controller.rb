@@ -15,6 +15,10 @@ class StoriesController < ApplicationController
 		redirect_to root_path
 	end
 
+	def show
+		@story = Story.find(params[:id])
+	end
+
 	private
 		def story_params
 			params.require(:story).permit(:happened_in, :story, :author, :author_nationality, :email, :continent)

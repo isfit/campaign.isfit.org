@@ -9,12 +9,18 @@
 
 <div class="row">
 	<div class"col-md-8 col-md-offset-2 text-center text-primary">
+		<button type="button" class="btn btn-link"><%= link_to "ASC", continent_path(@continent.id, sort: "ASC") %></button>
+		<button type="button" class="btn btn-link"><%= link_to "DESC", continent_path(@continent.id, sort: "DESC") %></button>
+		<button type="button" class="btn btn-link">Link</button>
+		<button type="button" class="btn btn-link">Link</button>
 		<% @stories.each do |story| %>
 			<%= render 'story', story: story %>
 		<% end %>
 		<div class="text-center">
 			<%= will_paginate @stories, renderer: BootstrapPagination::Rails, :page_links => false %>
 		</div>
+
 	</div>
 </div>
+
 

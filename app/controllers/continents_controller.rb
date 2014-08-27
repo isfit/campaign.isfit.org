@@ -3,8 +3,16 @@ class ContinentsController < ApplicationController
   end
 
   def show
+
+  	#binding.pry
   	@continent = Continent.find(params[:id])
-  	@stories = @continent.stories.order("created_at DESC").page(params[:page]).per_page(5)
+
+  	if params[:sort]
+  		stories = @continent.stories_sorted(params[:sort])
+  	else
+  		stories = @continent.stories_sorted("ASC")
+  	end
+  	@stories = stories.page(params[:page]).per_page(5)
   end
 
 end

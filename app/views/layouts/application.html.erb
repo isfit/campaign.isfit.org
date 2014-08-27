@@ -14,9 +14,16 @@
   <%= yield :head %>
 </head>
 <body>
-	<div class='container-fluid'>
-
-		<%= yield %>
+	<div class='container'>
+    <div class="row">
+      <div class="col-md-2 text-center">
+      </div>
+		  <div class="col-md-8 text-center">
+        <%= yield %>
+      </div>
+      <div class="col-md-2 text-center">
+      </div>
+    </div>
 	</div>
 
 </body>

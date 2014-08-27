@@ -14,7 +14,7 @@ $(window).resize(function() {
 
 ready = function(){
 	$('#map-continents').cssMap({
-		'size' : 960,
+		'size' : 750,
 		'onClick': function(e){
 			onClickFunction(e);
       var link = e.children('a').attr('href'),        // get link's URL; => #europe; 
