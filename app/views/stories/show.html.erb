@@ -16,3 +16,5 @@
 <div>
   <%= link_to "Read more stories from "+@story.continent.name, controller: "continents", action: "show", id: @story.continent %>
 </div>
+
+<%= render "disqus" %>
