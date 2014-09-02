@@ -8,6 +8,9 @@
 		<%= form_for :story, url: story_create_path do |f| %>
 			<p>
 
+				<%=f.label :title %><br>
+				<%=f.text_field :title %><br>
+
 				<%= f.label :happened_in %><br>
 				<%= f.select :happened_in, Country.countries_collected %><br> <!-- Dropdown -->
 
