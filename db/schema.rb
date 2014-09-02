@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140827165639) do
+ActiveRecord::Schema.define(version: 20140902113333) do
 
   create_table "continents", force: true do |t|
     t.string   "name"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20140827165639) do
     t.integer  "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
   end
 
   add_index "stories", ["author_nationality_id"], name: "index_stories_on_author_nationality_id", using: :btree
