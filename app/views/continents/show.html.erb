@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-md-8 col-md-offset-2 text-center text-primary">
+	<div class="text-primary">
 		<strong>Kontinent:</strong>
 		<%= @continent.name %>
 	</div>
@@ -8,7 +8,8 @@
 <%= render 'form' %>
 
 <div class="row">
-	<div class"col-md-8 col-md-offset-2 text-center text-primary">
+	<div class="col-md-7">
+		<%= link_to 'Create your own', controller: 'stories', action: 'create' %>
 		<button type="button" class="btn btn-link"><%= link_to "ASC", continent_path(@continent.id, sort: "ASC") %></button>
 		<button type="button" class="btn btn-link"><%= link_to "DESC", continent_path(@continent.id, sort: "DESC") %></button>
 		<button type="button" class="btn btn-link">Link</button>
@@ -16,10 +17,13 @@
 		<% @stories.each do |story| %>
 			<%= render 'story', story: story %>
 		<% end %>
-		<div class="text-center">
-			<%= will_paginate @stories, renderer: BootstrapPagination::Rails, :page_links => false %>
-		</div>
 
+		<%= will_paginate @stories, renderer: BootstrapPagination::Rails, :page_links => false %>
+
+
+	</div>
+	<div class="col-md-4 col-md-offset-1 text-right">
+		<%= @continent.name %>
 	</div>
 </div>
 
