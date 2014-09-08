@@ -11,7 +11,17 @@ class StoriesController < ApplicationController
 		@story = Story.new(p)
 
 		@story.save
-		redirect_to root_path
+		redirect_to @story
+	end
+
+	def new
+		@story = Story.new
+	end
+
+	def rate
+		@story = Story.find(params[:id])
+		Score.new(story_id: @story.id, value: params[:rating], uuid: current_user)
+		@story.calc_rating(@story.id)
 	end
 
 
@@ -25,7 +35,7 @@ class StoriesController < ApplicationController
 
 	private
 		def story_params
-			params.require(:story).permit(:happened_in, :story, :author, :author_nationality, :email, :continent)
+			params.require(:story).permit(:happened_in, :story, :author, :author_nationality, :email, :continent, :title)
 		end
 
 end

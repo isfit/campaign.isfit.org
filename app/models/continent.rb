@@ -12,4 +12,9 @@ class Continent < ActiveRecord::Base
     end
     stories
 	end
+
+  def self.continents_collected
+	  Continent.all.collect {|a| [a.name, a.id] }
+	end
+
 end

@@ -1,9 +1,18 @@
 <div class="row">
-  <div class="col-md-5">
+  <div class="col-md-8">
+    <h1><%= @story.title %> </h1>
     <%= @story.happened_in.name %>
     <%= @story.story %>
    </div>
-   <div class="col-md-3">
-    <h2>illustrations</h2>
-   </div> 
+   <div class="col-md-4">
+    <h2>
+      <%= @story.happened_in.name %>
+    </h2>
+   </div>
+</div>
+
+<%= render "rate" %>
+
+<div>
+  <%= link_to "Read more stories from "+@story.continent.name, controller: "continents", action: "show", id: @story.continent %>
 </div>

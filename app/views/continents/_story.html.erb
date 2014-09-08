@@ -1,5 +1,8 @@
-<div class="text-primary">
-	<%= link_to story.title, story %><br>
-	<%= link_to story.happened_in.name, story %>
-	<%= link_to story.story, story %>
+<div class="blog-post">
+
+	<h3><%= link_to story.title, story %><%= story.happened_in.name %></h3><br>
+	<%= truncate(story.story, length: 200, omission: "...") %><br>
+	<%= link_to "Read more", story, class: "btn btn-default btn-sm" %>
+	<hr>
+
 </div>
