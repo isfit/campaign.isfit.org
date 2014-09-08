@@ -1,4 +1,4 @@
-set :rvm_ruby_string, '1.9.2-p290'
+set :rvm_ruby_string, '1.9.3-p392'
 set :rvm_type, :user
 
 
