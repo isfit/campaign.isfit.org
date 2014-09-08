@@ -6,6 +6,7 @@ class Story < ActiveRecord::Base
 	
 	# validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
 	validates :story, length: { maximum: 2000 }
+	validates :title, presence: true
 
 
 	def self.rating(story_id)

@@ -4,12 +4,26 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_filter :released?
+  before_filter :track
 
   def released?
-  	release = Time.now > Time.parse('2014-09-31 18:00')
+  	release = Time.now > Time.parse('2014-09-01 18:00')
 
   	if !release
   		render text: 'Coming soon' and return
   	end
   end
+
+  def track
+  	session[:uuid] = SecureRandom.uuid if !current_user?
+  end
+
+  private
+  def current_user?
+		! session[:uuid].nil?
+	end
+
+	def current_user
+		session[:uuid]
+	end
 end

@@ -9,6 +9,8 @@ gem 'mysql2'
 gem 'sass-rails', '~> 4.0.3'
 # Use bootstrap-sass
 gem 'bootstrap-sass', '~> 3.2.0.1'
+# Use boostrap forms
+gem 'bootstrap_form'
 # Use autoprefixer to add browser vendor prefixes automatically
 gem 'autoprefixer-rails'
 # Use Uglifier as compressor for JavaScript assets
