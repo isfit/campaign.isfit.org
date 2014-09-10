@@ -9,7 +9,7 @@ class Story < ActiveRecord::Base
 	validates :title, presence: true
 
 
-	def self.rating(story_id)
+	def self.calc_rating(story_id)
 		s = Story.find(story_id)
 		s.rating = (Score.includes(:story).where("scores.story_id" => story_id).average(:value).to_f * 10000).to_i
 		s.save
