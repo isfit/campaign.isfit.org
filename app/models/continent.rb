@@ -9,6 +9,10 @@ class Continent < ActiveRecord::Base
       stories = stories.order("created_at ASC")
     elsif sort_string.eql?("DESC")
     	stories = stories.order("created_at DESC")
+    elsif sort_string.eql?("HIGH")
+    	stories = stories.order("rating DESC")
+    elsif sort_string.eql?("LOW")
+    	stories = stories.order("rating ASC")
     end
     stories
 	end

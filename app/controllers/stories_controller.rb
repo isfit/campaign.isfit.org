@@ -11,7 +11,7 @@ class StoriesController < ApplicationController
 		@story = Story.new(p)
 
 		@story.save
-		redirect_to @story
+		redirect_to @story, action: "show"
 	end
 
 	def new
