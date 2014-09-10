@@ -19,11 +19,13 @@
 
 		<%= will_paginate @stories, renderer: BootstrapPagination::Rails, :page_links => false %>
 
-		<%= link_to "Back", controller: "continents" %>
+		
 	</div>
 	<div class="col-md-4 col-md-offset-1 text-right">
 		<%= @continent.name %><br>
 		<%= link_to 'Create your own', controller: 'stories', action: 'new' %>
+
+		<%= link_to "Back", controller: "continents" %>
 	</div>
 </div>
 
