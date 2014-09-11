@@ -1,10 +1,11 @@
 
 <div class="row">
 	<div class="col-md-7">
-		<button type="button" class="btn btn-link"><%= link_to "Oldest first", continent_path(@continent.id, sort: "ASC") %></button>
-		<button type="button" class="btn btn-link"><%= link_to "Newest first", continent_path(@continent.id, sort: "DESC") %></button>
+		Sort by:
 		<button type="button" class="btn btn-link"><%= link_to "Highest rated", continent_path(@continent.id, sort: "HIGH") %></button>
 		<button type="button" class="btn btn-link"><%= link_to "Lowest rated", continent_path(@continent.id, sort: "LOW") %></button>
+		<button type="button" class="btn btn-link"><%= link_to "Newest", continent_path(@continent.id, sort: "DESC") %></button>
+		<button type="button" class="btn btn-link"><%= link_to "Oldest", continent_path(@continent.id, sort: "ASC") %></button>
 		<% @stories.each do |story| %>
 			<%= render 'story', story: story %>
 		<% end %>

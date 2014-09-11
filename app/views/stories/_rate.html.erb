@@ -1,0 +1,14 @@
+<br>
+
+<%= bootstrap_form_for(@score, url: rate_story_path(@story)) do |f| %>
+
+	<%= f.form_group :value, label: { text: "." }, help: "Use the stars to rate how corrupt you think the action in the story is, where one is less corrupt and five is super corrupt." do %>
+		<br>
+	  <%= f.radio_button :value, 0, label: "Not corrupt", checked: true, inline: true %>
+	  <%= f.radio_button :value, 1, label: "A little corrupt", inline: true %>
+	  <%= f.radio_button :value, 2, label: "Corrupt", inline: true %>
+	  <%= f.radio_button :value, 3, label: "Very corrupt", inline: true %>
+	  <%= f.radio_button :value, 4, label: "Extremely corrupt", inline: true %>
+	<% end %>
+  <%= f.submit %>
+<% end %>

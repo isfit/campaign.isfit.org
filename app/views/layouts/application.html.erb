@@ -18,13 +18,21 @@
     <div class="col-md-1">
     </div>
 	  <div class="col-md-10">
-      <div class="row">
+      <div class="container-fluid">
+        <div class="row text-center">
+          <%= image_tag "header.png" %>
+        </div>
       </div>
       <%= yield %>
     </div>
     <div class="col-md-1">
     </div>
 	</div>
+  <nav class="navbar navbar-default navbar-static-bottom">
+    <div class="text-center">
+      Do you have any questions? Contact us at <%= mail_to "headofcampaign@isfit.no" %>.
+    </div>
+  </nav>
 
 </body>
 </html>

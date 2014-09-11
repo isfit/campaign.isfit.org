@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 
   resources :continents
 
-  resources :stories, only: [:show, :new, :show]
+  resources :stories, only: [:show, :new]
   post 'story/create' => 'stories#create'
-  post 'story/rate/:id/:rating' => 'stories#rate'
+  post 'story/rate/:id' => 'stories#rate', as: 'rate_story'
 
   get 'welcome/index'
   get 'welcome/info'

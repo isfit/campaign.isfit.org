@@ -1,7 +1,20 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 html body {
   color: black;
 	background-color: white;
+}
+
+.progress-bar-danger {
+  background-color: #af4944;
+}
+
+.navbar {
+  min-height: 25px;
+  border-radius: 0px;
+  margin-bottom: 0px;
+  border: 0px;
 }
 
 @media screen and (min-width: 640px){

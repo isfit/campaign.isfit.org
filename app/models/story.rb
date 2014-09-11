@@ -5,14 +5,19 @@ class Story < ActiveRecord::Base
 	has_many :scores
 	
 	# validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
-	validates :story, length: { maximum: 2000 }
+	validates :story, length: { maximum: 2000 }, presence: true
 	validates :title, presence: true
+	validates :happened_in, presence: true
 
 
-	def self.calc_rating(story_id)
-		s = Story.find(story_id)
-		s.rating = (Score.includes(:story).where("scores.story_id" => story_id).average(:value).to_f * 10000).to_i
-		s.save
+	def calc_rating(story_id)
+		self.rating = (Score.includes(:story).where("scores.story_id" => story_id).average(:value).to_f * 10000).to_i
+		self.save
+	end
+
+	def percent
+		return 0 if rating.nil?
+		rating/500.0
 	end
 
 end

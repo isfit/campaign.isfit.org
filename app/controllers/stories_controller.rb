@@ -10,8 +10,11 @@ class StoriesController < ApplicationController
 
 		@story = Story.new(p)
 
-		@story.save
-		redirect_to @story, action: "show"
+		if @story.save
+			redirect_to @story
+		else
+			render :new
+		end
 	end
 
 	def new
@@ -20,13 +23,16 @@ class StoriesController < ApplicationController
 
 	def rate
 		@story = Story.find(params[:id])
-		Score.new(story_id: @story.id, value: params[:rating], uuid: current_user)
+		Score.create(story_id: @story.id, value: params[:score][:value], uuid: current_user)
 		@story.calc_rating(@story.id)
+
+		redirect_to @story
 	end
 
 
 	def show
 		@story = Story.find(params[:id])
+		@score = Score.new
 	end
 
 	def score

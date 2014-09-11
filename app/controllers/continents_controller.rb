@@ -10,7 +10,7 @@ class ContinentsController < ApplicationController
   	if params[:sort]
   		stories = @continent.stories_sorted(params[:sort])
   	else
-  		stories = @continent.stories_sorted("ASC")
+  		stories = @continent.stories_sorted("HIGH")
   	end
   	@stories = stories.page(params[:page]).per_page(5)
   end
