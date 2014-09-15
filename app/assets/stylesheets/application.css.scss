@@ -11,6 +11,7 @@
  * file per style scope.
  *
 *= require rails_bootstrap_forms
+ *= require font-awesome
  *= require_tree .
  *= require_self
  */
@@ -22,3 +23,26 @@
  	width: 130%;
  	height: 130%;
  }
+
+ .footer{
+ 	margin-bottom: 0;
+ 	text-align: center;
+  background-color: #CBC5BD;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 10px;
+  margin-top: 100px;
+ }
+ @font-face {
+    font-family: 'Tondu'; /*a name to be used later*/
+    src: url('assets/fonts/tondu.ttf'); /*URL to font*/
+}
+h1, h2, h3, h4, h5{
+	font-family: tondu;
+}
+.go-back-button-info{
+	color: #000;
+}
+.go-back-button-info:hover{
+	color: #C27975;
+}

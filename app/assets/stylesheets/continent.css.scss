@@ -1,3 +1,85 @@
 // Place all the styles related to the continent controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.frontpage-button{
+	color:#000;	
+}
+.frontpage-button:hover{
+	color:#C27975;
+}
+.button-border{
+
+}
+#North-america{
+	background: url('continents-750.png') no-repeat -357px -451px;
+		left: 10%;
+	position: relative;
+	width: 289px;
+	height: 213px;
+}
+#Africa{
+	background: url('continents-750.png') no-repeat -334px -714px;
+	left: 30%;
+	position: relative;
+	width: 135px;
+	height: 135px;
+}
+#South-america{
+	background: url('continents-750.png') no-repeat -15px -731px;
+		left: 30%;
+	position: relative;
+	width: 93px;
+	height: 140px;
+}
+#Europe{
+	background: url('continents-750.png') no-repeat -530px -703px;
+		left: 30%;
+	position: relative;
+	width: 125px;
+	height: 150px;
+}
+#Asia{
+	background: url('continents-750.png') no-repeat -15px -451px;
+		left: 5%;
+	position: relative;
+	width: 255px;
+	height: 241px;
+}
+#Australia{
+	background: url('continents-750.png') no-repeat -138px -758px;
+		left: 35%;
+	position: relative;
+	width: 124px;
+	height: 96px;;
+}
+.share-button{
+	margin-top: 0px;
+	margin-left: -100px;
+	width: 60%;
+	height: 60%;
+
+}
+#continent-name{
+	text-transform: uppercase;
+}
+@media screen and (max-width: 640px){
+.share-button{
+	width: auto;
+	height: auto;
+}
+ }
+
+@media screen and (max-width: 750px){
+.share-button{
+	width:auto;
+	height: auto;
+}
+ }
+
+@media screen and (max-width: 992px){
+.share-button{
+	width: auto;
+	height: auto;
+}
+ }
+
