@@ -21,11 +21,9 @@
       <div class="container-fluid">
         <div class="row text-center">
           <%= link_to image_tag("header.png", class: "banner"), controller: "continents" %>
-
-
-
         </div>
       </div>
+      <hr>
       <%= yield %>
     </div>
     <div class="col-md-1">
@@ -35,7 +33,7 @@
     <div class="container">
       <div class="text-center">
         <p>Do you have any questions?</p> 
-        <p>Contact us at <%= mail_to "theglobalinfection[at]isfit.no" %>.</p>
+        <p>Contact us at <%= mail_to "theglobalinfection@isfit.no" %>.</p>
       </div>
     </div>
   </div>
