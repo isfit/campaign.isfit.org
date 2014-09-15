@@ -11,10 +11,10 @@
 		<%= bootstrap_form_for(@story, url: story_create_path) do |f| %>
 			<%= f.text_field :title, class: "required" %>
 			<%= f.text_area :story, class: "required" %>
-			<%= f.select :continent, Continent.continents_collected %>
-			<%= f.select :happened_in, Country.countries_collected %>
+			<%= f.select :continent_id, Continent.continents_collected,:include_blank => '<Select continent>', class: "required"  %>
+			<%= f.select :happened_in_id, Country.countries_collected, :include_blank => '<Select country>', class: "required"   %>
 			<%= f.text_field :author %>
-			<%= f.select :author_nationality, Country.countries_collected  %>
+			<%= f.select :author_nationality_id, Country.countries_collected, :include_blank => '<Select nationality>' %>
 			<%= f.email_field :email %>
 			<br>
 			<br>

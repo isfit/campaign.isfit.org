@@ -7,8 +7,8 @@ class Story < ActiveRecord::Base
 	# validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
 	validates :story, length: { maximum: 2000 }, presence: true
 	validates :title, presence: true
-	validates :happened_in, presence: true
-
+	validates :happened_in, presence: true, allow_blank: false
+	validates :continent, presence: true, allow_blank: false
 
 	def calc_rating(story_id)
 		self.rating = (Score.includes(:story).where("scores.story_id" => story_id).average(:value).to_f * 10000).to_i
