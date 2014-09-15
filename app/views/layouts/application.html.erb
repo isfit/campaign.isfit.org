@@ -20,7 +20,10 @@
 	  <div class="col-md-10">
       <div class="container-fluid">
         <div class="row text-center">
-          <%= image_tag "header.png" %>
+          <%= link_to image_tag("header.png", class: "banner"), controller: "continents" %>
+
+
+
         </div>
       </div>
       <%= yield %>

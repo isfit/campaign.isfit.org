@@ -23,6 +23,7 @@ class StoriesController < ApplicationController
 
 	def rate
 		@story = Story.find(params[:id])
+		binding.pry
 		Score.create(story_id: @story.id, value: params[:score][:value], uuid: current_user)
 		@story.calc_rating(@story.id)
 
