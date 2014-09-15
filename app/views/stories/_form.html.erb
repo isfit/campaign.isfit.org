@@ -11,8 +11,8 @@
 		<%= bootstrap_form_for(@story, url: story_create_path) do |f| %>
 			<%= f.text_field :title, class: "required", label: "Title [required]" %>
 			<%= f.text_area :story, class: "required", label: "Story [required]" %>
-			<%= f.select :continent_id, Continent.continents_collected,,:include_blank => '<Select continent>', class: "required", label: "Continent [required]" %>
-			<%= f.select :happened_in, Country.countries_collected,, :include_blank => '<Select country>', class: "required", label: "Happened in country [required]" %>
+			<%= f.select :continent_id, Continent.continents_collected,:include_blank => '<Select continent>', class: "required", label: "Continent [required]" %>
+			<%= f.select :happened_in, Country.countries_collected, :include_blank => '<Select country>', class: "required", label: "Happened in country [required]" %>
 			<%= f.text_field :author %>
 			<%= f.select :author_nationality_id, Country.countries_collected, :include_blank => '<Select nationality>'  %>
 			<%= f.email_field :email, label: "Email [Will not be shared]"%>

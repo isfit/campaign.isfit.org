@@ -4,18 +4,16 @@
       <h1><%= @story.title %> </h1>
       <div class="story-text">
         <%= @story.story  %>
+        <p>
         <% if !@story.author_nationality.eql?(0) %>
-          <%= @story.author_nationality.name %>
+          <h5>Author nationality: <%= @story.author_nationality.name %></h5>
         <% end %>
+        </p>
       </div>
       <% if !@has_rated %>
         <%= render "rate" %>
       <% else %>
-
-        <div class="progress">
-          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: <%= @story.percent %>%">
-          </div>
-        </div>
+        <%= render "show_rating" %>
       <% end %>
 
 
