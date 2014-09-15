@@ -8,5 +8,10 @@
 	</div>
 </div>
 <div class="row text-center">
-	<h1><%= link_to 'Continue', controller: 'continents' %></h1>
+	<div class="col-md-2 col-md-offset-3 text-center">
+		<h1><%= link_to image_tag("knapp1.png", class: "welcome-index-button"), controller: 'stories', action: "new" %></h1>
+	</div>
+	<div class="col-md-2 col-md-offset-2 text-center">
+		<h1><%= link_to image_tag("knapp2.png", class: "welcome-index-button"), controller: 'continents' %></h1>
+	</div>
 </div>

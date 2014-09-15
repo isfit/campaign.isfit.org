@@ -9,13 +9,13 @@
 <div class='row'>
 	<div class='col-md-8 text-center col-md-offset-2'>
 		<%= bootstrap_form_for(@story, url: story_create_path) do |f| %>
-			<%= f.text_field :title, class: "required" %>
-			<%= f.text_area :story, class: "required" %>
-			<%= f.select :continent, Continent.continents_collected %>
-			<%= f.select :happened_in, Country.countries_collected %>
+			<%= f.text_field :title, class: "required", label: "Title [required]" %>
+			<%= f.text_area :story, class: "required", label: "Story [required]" %>
+			<%= f.select :continent_id, Continent.continents_collected,,:include_blank => '<Select continent>', class: "required", label: "Continent [required]" %>
+			<%= f.select :happened_in, Country.countries_collected,, :include_blank => '<Select country>', class: "required", label: "Happened in country [required]" %>
 			<%= f.text_field :author %>
-			<%= f.select :author_nationality, Country.countries_collected  %>
-			<%= f.email_field :email %>
+			<%= f.select :author_nationality_id, Country.countries_collected, :include_blank => '<Select nationality>'  %>
+			<%= f.email_field :email, label: "Email [Will not be shared]"%>
 			<br>
 			<br>
 			<%= f.submit %>
