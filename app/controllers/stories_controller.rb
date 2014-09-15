@@ -4,9 +4,9 @@ class StoriesController < ApplicationController
 
 		# Bør gjøres på en bedre måte
 		p = story_params
-		p[:happened_in] = Country.find(p[:happened_in].to_i)
-		p[:author_nationality] = Country.find(p[:author_nationality].to_i)
-		p[:continent] = Continent.find(p[:continent].to_i)
+		#p[:happened_in] = Country.find(p[:happened_in].to_i)
+		#p[:author_nationality] = Country.find(p[:author_nationality].to_i)
+		#p[:continent] = Continent.find(p[:continent].to_i)
 
 		@story = Story.new(p)
 
@@ -42,7 +42,7 @@ class StoriesController < ApplicationController
 
 	private
 		def story_params
-			params.require(:story).permit(:happened_in, :story, :author, :author_nationality, :email, :continent, :title)
+			params.require(:story).permit(:happened_in_id, :story, :author, :author_nationality_id, :email, :continent_id, :title)
 		end
 
 end
