@@ -20,7 +20,7 @@ set :use_sudo, false
 
 set :deploy_to, "/srv/www/www.theglobalinfection.com"
 set :deploy_via, :remote_cache
-set :branch, "deploy"
+set :branch, "master"
 
 set :rails_env, 'production'
 
