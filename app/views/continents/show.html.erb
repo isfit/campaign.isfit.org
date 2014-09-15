@@ -14,12 +14,13 @@
 
 		
 	</div>
-	<div class="col-md-4 col-md-offset-1 text-right">
-		
-		<h1><%= @continent.name.capitalize %></h1>
-		<h1><%= link_to 'Create your own', controller: 'stories', action: 'new' %></h1>
+	<div class="col-md-4 col-md-offset-1 text-center">
+		<h3 id="continent-name"><%= @continent.name.capitalize %></h3>
 
-		<h2><%= link_to "Back", controller: "continents" %></h2>
+		<p id="<%=@continent.name.capitalize%>" class="text-center">
+		</p>
+		<%= link_to image_tag("knapp1.png", class: 'share-button'), controller: 'stories', action: 'new'  %>
+
 	</div>
 </div>
 
