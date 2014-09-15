@@ -7,7 +7,11 @@ class ApplicationController < ActionController::Base
   before_filter :track
 
   def released?
-  	release = Time.now > Time.parse('2014-09-01 18:00')
+  	release = Time.now > Time.parse('2014-09-31 18:00')
+
+    #if Rails.env.development?
+    return
+    #end
 
   	if !release
   		render text: 'Coming soon' and return
