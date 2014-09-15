@@ -50,4 +50,6 @@ gem 'capistrano-bundler', group: :development
 gem 'will_paginate-bootstrap'
 gem 'pry'
 gem 'thin'
+gem 'font-awesome-sass'
+
 
