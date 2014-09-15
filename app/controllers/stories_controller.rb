@@ -24,16 +24,22 @@ class StoriesController < ApplicationController
 	def rate
 		@story = Story.find(params[:id])
 		binding.pry
-		Score.create(story_id: @story.id, value: params[:score][:value], uuid: current_user)
-		@story.calc_rating(@story.id)
+		if Score.has_rated(@story.id, current_user)
+			Score.create(story_id: @story.id, value: params[:score][:value], uuid: current_user)
 
-		redirect_to @story
+			@story.calc_rating(@story.id)
+			redirect_to @story
+		end
+		
+
 	end
 
 
 	def show
 		@story = Story.find(params[:id])
 		@score = Score.new
+		@has_rated = Score.has_rated(@story.id, current_user)
+
 	end
 
 	def score

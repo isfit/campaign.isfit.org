@@ -6,8 +6,9 @@
 
     <br>
 
-
-    <%= render "rate" %>
+    <% if @has_rated %>
+      <%= render "rate" %>
+    <% end %>
 
 
    </div>
@@ -15,10 +16,6 @@
     <h2>
       <%= @story.happened_in.name %>
     </h2>
-
-      <div class="">
-
-      </div>
 
    </div>
 </div>
