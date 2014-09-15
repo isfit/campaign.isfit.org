@@ -28,7 +28,7 @@
   <div class="row">
     <div class="col-md-4 col-md-offset-8 story-text">
             <h4>
-            <%= link_to "Read more stories from "+@story.continent.name, controller: "continents", action: "show", id: @story.continent %>
+            <%= link_to "Read more stories from "+@story.continent.name,{ controller: "continents", action: "show", id: @story.continent }, class: "frontpage-button" %>
           </h4>
     </div>
   </div>
