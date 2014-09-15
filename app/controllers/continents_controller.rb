@@ -3,8 +3,6 @@ class ContinentsController < ApplicationController
   end
 
   def show
-
-  	#binding.pry
   	@continent = Continent.find(params[:id])
 
   	if params[:sort]
