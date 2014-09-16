@@ -24,7 +24,9 @@
       <h2>
         <%= @story.happened_in.name %>
       </h2>
-
+      <div class="text-right">
+        <%= link_to image_tag("knapp1.png", class: 'share-button'), controller: 'stories', action: 'new'  %>
+      </div>
      </div>
   </div>
   <div class="row">
