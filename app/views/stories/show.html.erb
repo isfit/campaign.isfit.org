@@ -3,9 +3,11 @@
     <div class="col-md-8">
       <h1><%= @story.title %> </h1>
       <div class="story-text">
-        <%= @story.story  %>
         <p>
-        <% if !@story.author_nationality.eql?(0) %>
+          <%= @story.story  %>
+        </p>
+        <p>
+        <% if !@story.author_nationality.blank? %>
           <h5>Author nationality: <%= @story.author_nationality.name %></h5>
         <% end %>
         </p>
