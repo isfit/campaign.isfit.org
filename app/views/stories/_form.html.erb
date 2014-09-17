@@ -9,6 +9,7 @@
 <div class='row'>
 	<div class='col-md-8 text-center col-md-offset-2'>
 		<%= bootstrap_form_for(@story, url: story_create_path) do |f| %>
+			<%= f.error_summary %>
 			<%= f.text_field :title, label: "Title [required]" %>
 			<%= f.text_area :story, rows: 5, label: "Story (max 2000 characters) [required]" %>
 			<%= f.select :continent_id, Continent.continents_collected, :include_blank => '<Select continent>', label: "Continent [required]" %>
