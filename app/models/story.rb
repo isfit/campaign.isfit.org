@@ -18,7 +18,7 @@ class Story < ActiveRecord::Base
 
 	def percent
 		return 0 if rating.nil?
-		rating/500.0
+		rating/400.0
 	end
 
 end

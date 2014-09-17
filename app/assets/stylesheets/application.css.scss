@@ -46,3 +46,24 @@ h1, h2, h3, h4, h5{
 .go-back-button-info:hover{
 	color: #C27975;
 }
+
+@media screen and (max-width: 640px){
+.welcome-index-button{
+  width: auto;
+  height: auto;
+}
+ }
+
+@media screen and (max-width: 750px){
+.welcome-index-button{
+  width:auto;
+  height: auto;
+}
+ }
+
+@media screen and (max-width: 992px){
+.welcome-index-button{
+  width: auto;
+  height: auto;
+}
+ }
