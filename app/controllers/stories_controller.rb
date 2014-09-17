@@ -13,6 +13,14 @@ class StoriesController < ApplicationController
 		if @story.save
 			redirect_to @story
 		else
+			if @story.continent.blank?
+				@story.errors.messages.reject! {|k| k.eql? :continent}
+				@story.errors.add(:base, "You must choose continent to share story")
+			end
+			if @story.continent.blank?
+				@story.errors.messages.reject! {|k| k.eql? :happened_in}
+				@story.errors.add(:base, "You must choose which country this happened in to share story")
+			end
 			render :new
 		end
 	end
