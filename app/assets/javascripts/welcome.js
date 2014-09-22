@@ -10,7 +10,7 @@ function getInstagram(url) {
             var output = "";
             var div = document.getElementById('instagram-div');
             $.each(data.data, function (i, item) {
-                output += '<div class="col-md-2 bottom-margin"><a href="' + item.link +'"><img src="' + item.images.standard_resolution.url + '" class="instagram_image"/></a></div>';
+                output += '<div class="col-md-2 bottom-margin"><a href="' + item.link +'"><img src="' + item.images.low_resolution.url + '" class="instagram_image"/></a></div>';
 
             });
             div.innerHTML = output;
