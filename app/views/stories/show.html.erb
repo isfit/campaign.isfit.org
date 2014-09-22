@@ -7,6 +7,12 @@
           <%= @story.story  %>
         </p>
         <p>
+        <% if !@story.solution.blank? %>
+        <h4> My suggested solution </h4>
+          <%= @story.solution%>
+        <% end %>
+        </p>
+        <p>
         <% if !@story.author_nationality.blank? %>
           <h5>Author nationality: <%= @story.author_nationality.name %></h5>
         <% end %>
