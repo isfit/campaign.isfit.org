@@ -4,7 +4,7 @@
       <h1><%= @story.title %> </h1>
       <div class="story-text">
         <p>
-          <%= @story.story  %>
+          <%= simple_format @story.story  %>
         </p>
         <p>
         <% if !@story.solution.blank? %>
