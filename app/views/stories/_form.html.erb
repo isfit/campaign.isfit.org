@@ -16,6 +16,7 @@
 			<%= f.select :happened_in_id, Country.countries_collected, :include_blank => '<Select country>', label: "Happened in country [required]" %>
 			<%= f.text_field :author %>
 			<%= f.select :author_nationality_id, Country.countries_collected, :include_blank => '<Select nationality>'  %>
+			<%= f.text_area :solution, rows: 3, label: "How could this situation be improved? (max 2000 characters)", description: "Give something" %>
 			<%= f.email_field :email, label: "Email [Will not be shared]"%>
 			<br>
 			<br>

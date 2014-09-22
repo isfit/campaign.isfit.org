@@ -25,6 +25,7 @@
  }
 
  .footer{
+  position: static;
  	margin-bottom: 0;
  	text-align: center;
   background-color: #efeeed;
@@ -32,7 +33,9 @@
   margin-bottom: 0;
   padding: 10px;
   margin-top: 100px;
+  bottom: 0;
  }
+
  @font-face {
     font-family: 'Tondu'; /*a name to be used later*/
     src: asset-url('Tondu.ttf', font); /*URL to font*/
