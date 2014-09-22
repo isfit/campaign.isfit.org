@@ -9,6 +9,7 @@ class Story < ActiveRecord::Base
 	validates :title, presence: true
 	validates :happened_in, presence: true, allow_blank: false
 	validates :continent, presence: true, allow_blank: false
+	validates :solution, length: { maximum: 2000 }
 
 
 	def calc_rating(story_id)
