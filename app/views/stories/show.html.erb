@@ -2,29 +2,38 @@
   <div class="row">
     <div class="col-md-8">
       <h1><%= @story.title %> </h1>
-      <div class="story-text">
+        <div class="story-text">
+          <p>
+            <%= simple_format @story.story  %>
+          </p>
+          <p>
+            <% if !@story.solution.blank? %>
+              <h4> My suggested solution </h4>
+              <%= @story.solution%>
+            <% end %>
+          </p>
         <p>
-          <%= simple_format @story.story  %>
+            <% if !@story.author_nationality.blank? %>
+            <h5>Author nationality: <%= @story.author_nationality.name %></h5>
+            <% end %>
         </p>
-        <p>
-        <% if !@story.solution.blank? %>
-        <h4> My suggested solution </h4>
-          <%= @story.solution%>
-        <% end %>
-        </p>
-        <p>
-        <% if !@story.author_nationality.blank? %>
-          <h5>Author nationality: <%= @story.author_nationality.name %></h5>
-        <% end %>
-        </p>
-      </div>
-      <% if !@has_rated %>
+        </div>
+            <% if !@has_rated %>
         <%= render "rate" %>
       <% else %>
         <%= render "show_rating" %>
       <% end %>
-
-
+      <p></p>
+      <div style="margin-bottom: 5px">
+              <a class="facebook-tag" href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + window.location.href, 'newwindow', 'width=500, height=350'); return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="fb-counter" id="fb-counter1">0</span>
+              </a>
+              <a class="twitter-tag" href="#" onclick="window.open('https://twitter.com/home?status=' + window.location.href, 'newwindow', 'width=500, height=350'); return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="twitter-counter" id="twitter-counter1">0</span>
+              </a>
+          </div>
      </div>
      <div class="col-md-4 text-center">
       <h2>
