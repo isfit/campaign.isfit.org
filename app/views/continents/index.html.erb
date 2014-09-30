@@ -1,15 +1,15 @@
-
 <div class="row">
 	<div class="col-md-6 text-center">
-		<h2 class="button-border">
+		<h2>
 			<%= link_to " #theglobalinfection", {controller: "welcome", action: "index"}, class: "frontpage-button" %>
 		</h2>
 	</div>
 	<div class="col-md-6 text-center">
-		<h2 class="button-border"><%= link_to 'About the campaign', {controller: 'welcome', action: 'info'}, class: "frontpage-button" %></h2>
+		<h2><%= link_to 'About the campaign', {controller: 'welcome', action: 'info'}, class: "frontpage-button" %></h2>
 	</div>
 </div>
 <hr>
+
 <div id="map-continents">
 	<ul class="continents">
 		<li class="c1"><a href="#africa">Africa</a></li>
@@ -22,12 +22,12 @@
 </div>
 <hr>
 <div class="row">
-	<div class="col-md-1 text-center" >
+	<div class="col-md-2 text-center" >
 		<h1>
 			?
 		</h1>
 	</div>
-	<div class="col-md-11 map-info" >
+	<div class="col-md-10 map-info" >
 		<p>
 			Use the map to navigate between the different continents. Share your own experience with corruption or read and discuss other people’s stories. 
 
@@ -35,16 +35,8 @@
 		</p>
 	</div>
 </div>
-<hr>
 
-<div class="row" >
-	<div class="col-md-3" >
-		<%= link_to image_tag("WEF-logo.jpg", class: "img-responsive"), "http://wef.ch/corruptionsurvey" %>
-	</div>
-	<div class="col-md-9 WEF-text" >
-		Contribute further in the fight against corruption - give World Economic Forum your data
-	</div>
-</div>
+<%= render "wef" %>
 
 <%= render "instagram" %>
 

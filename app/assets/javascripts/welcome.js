@@ -19,7 +19,7 @@ function getInstagram(url) {
 }
 var ready;
 ready = function() {
-  getInstagram('https://api.instagram.com/v1/tags/tradeyourideas/media/recent?client_id=802d634befd6476c80cc18dbee1ce8e0&count=6');
+  getInstagram('https://api.instagram.com/v1/tags/theglobalinfection/media/recent?client_id=802d634befd6476c80cc18dbee1ce8e0&count=6');
         //getInstagram('https://api.instagram.com/v1/tags/isfit2015/media/recent?client_id=802d634befd6476c80cc18dbee1ce8e0&count=2');
 };
 

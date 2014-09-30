@@ -16,9 +16,10 @@
 	</div>
 	<div class="col-md-4 col-md-offset-1 text-center">
 		<h3 id="continent-name"><%= @continent.name.capitalize %></h3>
-
-		<p id="<%=@continent.name.capitalize%>" class="text-center">
-		</p>
+		<%= link_to controller: 'continents', action: 'index' do %>
+			<p id="<%=@continent.name.capitalize%>" class="text-center">
+			</p>
+		<% end %>
 		<%= link_to image_tag("knapp1.png", class: 'share-button'), controller: 'stories', action: 'new'  %>
 
 	</div>

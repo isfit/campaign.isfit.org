@@ -11,7 +11,10 @@ class StoriesController < ApplicationController
 		@story = Story.new(p)
 
 		if @story.save
-			redirect_to @story
+			@newly_created = true
+			@score = Score.new
+			@has_rated = Score.has_rated(@story.id, current_user)
+			render :show
 		else
 			if @story.continent.blank?
 				@story.errors.messages.reject! {|k| k.eql? :continent}
