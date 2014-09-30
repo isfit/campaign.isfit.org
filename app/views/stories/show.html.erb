@@ -9,7 +9,7 @@
         <p>
         <% if !@story.solution.blank? %>
         <h4> My suggested solution </h4>
-          <%= @story.solution%>
+          <%= simple_format @story.solution %>
         <% end %>
         </p>
         <p>
@@ -36,10 +36,13 @@
      </div>
   </div>
   <div class="row">
+    <div class="col-md-8" >
+      <%= render "continents/wef" if @newly_created %>
+    </div>
     <div class="col-md-4 col-md-offset-8 story-text">
-            <h4>
-            <%= link_to "Read more stories from "+@story.continent.name,{ controller: "continents", action: "show", id: @story.continent }, class: "frontpage-button" %>
-          </h4>
+      <h4>
+        <%= link_to "Read more stories from "+@story.continent.name,{ controller: "continents", action: "show", id: @story.continent }, class: "frontpage-button" %>
+      </h4>
     </div>
   </div>
 

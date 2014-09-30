@@ -11,12 +11,12 @@
 		<%= bootstrap_form_for(@story, url: story_create_path) do |f| %>
 			<%= f.error_summary %>
 			<%= f.text_field :title, label: "Title [required]" %>
-			<%= f.text_area :story, rows: 5, label: "Story (max 2000 characters) [required]" %>
+			<%= f.text_area :story, rows: 5, label: "Story (max 2000 characters) [required]", placeholder: "Tell us your story concerning corruption or possible grey areas of corruption." %>
 			<%= f.select :continent_id, Continent.continents_collected, :include_blank => '<Select continent>', label: "Continent [required]" %>
 			<%= f.select :happened_in_id, Country.countries_collected, :include_blank => '<Select country>', label: "Happened in country [required]" %>
 			<%= f.text_field :author %>
 			<%= f.select :author_nationality_id, Country.countries_collected, :include_blank => '<Select nationality>'  %>
-			<%= f.text_area :solution, rows: 3, label: "How could this situation be improved? (max 2000 characters)", description: "Give something" %>
+			<%= f.text_area :solution, rows: 3, label: "Solution (max 2000 characters)", description: "Give something", placeholder: 'What could have been done differently? What measures are necessary to prevent such situations?' %>
 			<%= f.email_field :email, label: "Email [Will not be shared]"%>
 			<br>
 			<br>

@@ -11,7 +11,9 @@ class StoriesController < ApplicationController
 		@story = Story.new(p)
 
 		if @story.save
-			redirect_to @story
+			params[:newly_created] = true
+			binding.pry
+			redirect_to @story, :newly_created => true
 		else
 			if @story.continent.blank?
 				@story.errors.messages.reject! {|k| k.eql? :continent}
@@ -45,6 +47,8 @@ class StoriesController < ApplicationController
 
 
 	def show
+		binding.pry
+		@newly_created = params[:newly_created]
 		@story = Story.find(params[:id])
 		@score = Score.new
 		@has_rated = Score.has_rated(@story.id, current_user)
