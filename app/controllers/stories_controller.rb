@@ -48,7 +48,6 @@ class StoriesController < ApplicationController
 
 
 	def show
-		binding.pry
 		@newly_created = params[:newly_created]
 		@story = Story.find(params[:id])
 		@score = Score.new
