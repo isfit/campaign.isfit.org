@@ -1,4 +1,16 @@
 <div class="stories">
+  <% if @newly_created %>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-2">
+        <h2>Thank you for your story!</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12" >
+        <%= render "continents/wef" %>
+      </div>
+    </div>
+  <% end %>
   <div class="row">
     <div class="col-md-8">
       <h1><%= @story.title %> </h1>
@@ -46,9 +58,6 @@
      </div>
   </div>
   <div class="row">
-    <div class="col-md-8" >
-      <%= render "continents/wef" if @newly_created %>
-    </div>
     <div class="col-md-4 col-md-offset-8 story-text">
       <h4>
         <%= link_to "Read more stories from "+@story.continent.name,{ controller: "continents", action: "show", id: @story.continent }, class: "frontpage-button" %>

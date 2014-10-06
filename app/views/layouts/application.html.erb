@@ -38,6 +38,16 @@
   <div class="footer">
     <div class="container">
       <div class="text-center">
+                <div style="margin-bottom: 5px">
+          <a class="facebook-tag" href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + 'http://www.theglobalinfection.com/', 'newwindow', 'width=500, height=350'); return false;">
+            <i class="fa fa-facebook"></i>
+            <span class="fb-counter" id="fb-counter1">0</span>
+          </a>
+          <a class="twitter-tag" href="#" onclick="window.open('https://twitter.com/home?status=' + window.location.href, 'newwindow', 'width=500, height=350'); return false;">
+            <i class="fa fa-twitter"></i>
+            <span class="twitter-counter" id="twitter-counter1">0</span>
+          </a>
+        </div>
         <p>Do you have any questions?</p> 
         <p>Contact us at <%= mail_to "theglobalinfection[at]isfit.org" %>.</p>
       </div>

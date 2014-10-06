@@ -18,7 +18,7 @@ class Continent < ActiveRecord::Base
 	end
 
   def self.continents_collected
-	  Continent.all.collect {|a| [a.name.capitalize, a.id] }
+	  Continent.all.collect {|a| [a.display_name, a.id] }
 	end
 
 end
