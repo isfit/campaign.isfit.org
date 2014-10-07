@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141006193827) do
+ActiveRecord::Schema.define(version: 20141007001810) do
 
   create_table "continents", force: true do |t|
     t.string   "name"
@@ -47,8 +47,8 @@ ActiveRecord::Schema.define(version: 20141006193827) do
     t.datetime "updated_at"
     t.string   "title"
     t.text     "solution"
-    t.boolean  "validated"
-    t.boolean  "deleted"
+    t.boolean  "validated",             default: false
+    t.boolean  "deleted",               default: false
   end
 
   add_index "stories", ["author_nationality_id"], name: "index_stories_on_author_nationality_id", using: :btree

@@ -2,7 +2,7 @@ class Continent < ActiveRecord::Base
 	has_many :stories
 
 	def stories_sorted sort_string
-		stories = self.stories
+		stories = self.stories.where(validated: true, deleted: false)
 
 
 		if sort_string.eql?("ASC")
