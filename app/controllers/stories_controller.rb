@@ -41,6 +41,7 @@ class StoriesController < ApplicationController
 			@story.calc_rating(@story.id)
 			redirect_to @story
 		end
+		
 
 		
 
@@ -48,9 +49,13 @@ class StoriesController < ApplicationController
 
 
 	def show
-		@story = Story.find(params[:id])
-		@score = Score.new
-		@has_rated = Score.has_rated(@story.id, current_user)
+		if Story.find(params[:id]).validated
+			@story = Story.find(params[:id])
+			@score = Score.new
+			@has_rated = Score.has_rated(@story.id, current_user)
+		else
+				# render something about that this story hasnt been validated yet 
+				redirect_to continent
 
 	end
 
