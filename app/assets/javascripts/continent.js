@@ -47,7 +47,7 @@ ready = function(){
 
 
 $(document).on("ready page:change", function() {
-  $('.progress-bar-danger').tooltip()
+  $('.abc').tooltip()
 });
 
 $(document).ready(ready);
