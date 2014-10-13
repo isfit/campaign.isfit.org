@@ -14,6 +14,7 @@ class StoriesController < ApplicationController
 			@newly_created = true
 			@score = Score.new
 			@has_rated = Score.has_rated(@story.id, current_user)
+			AuthorMailer.new_story_mail(@story).deliver
 			render :show
 		else
 			if @story.continent.blank?
@@ -41,21 +42,17 @@ class StoriesController < ApplicationController
 			@story.calc_rating(@story.id)
 			redirect_to @story
 		end
-		
-
-		
-
 	end
 
 
 	def show
-		if Story.find(params[:id]).validated
+		if Story.find(params[:id]).validated? && !Story.find(params[:id]).deleted?
 			@story = Story.find(params[:id])
 			@score = Score.new
 			@has_rated = Score.has_rated(@story.id, current_user)
 		else
-				# render something about that this story hasnt been validated yet 
-				redirect_to continent
+			redirect_to root_path, notice: "This story is not accepted yet"
+		end
 
 	end
 

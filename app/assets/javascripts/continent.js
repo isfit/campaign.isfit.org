@@ -44,5 +44,11 @@ ready = function(){
    });
 }
 
+
+
+$(document).on("ready page:change", function() {
+  $('.progress-bar-danger').tooltip()
+});
+
 $(document).ready(ready);
 $(document).on('page:load', ready);
