@@ -7,8 +7,8 @@
   <meta name="description" content="Share your story about a corrupt incident.">
   <meta name="keywords" content="student, corrupt, corruption, campaign, isfit, global infection, the global infection">
   <meta property="og:title" content="Share your story about corruption" >
-  <meta property="og:site_name" content="The Global Infection" >
-  <meta property="og:description" content="The vision behind this campaign is to raise awareness of corruption, arouse curiosity and challenge young people’s attitude towards the topic. A corrupt act is to abuse the power entrusted in you for your own gain (definition by Transparency International), and it inflicts people in all corners of the world, of all ages. Corruption is not always easy to spot, as it is a complex phenomenon with many grey areas. With this campaign we hope to provide relevant and important information about corruption and shed light on the many different shades of it. " >
+  <meta property="og:site_name" content="ISFIT Handbook of anti-corruption" >
+  <meta property="og:description" content=" ====== INFORMATION ABOUT CORRUPTION HANDBOOK =====  " >
   <meta property="og:image" content="<%= image_url("knapp1.png") %>" >
   
   <%= favicon_link_tag 'favicon.ico' %>
@@ -32,17 +32,11 @@
 
   <%= yield :head %>
 </head>
-<body>
+<body data-spy="scroll">
 	<div class='container'>
     <div class="col-md-1">
     </div>
 	  <div class="col-md-10">
-      <div class="container-fluid">
-        <div class="row text-center">
-          <%= link_to image_tag("header_theglobalinfection.png", class: "banner"), controller: "continents" %>
-        </div>
-      </div>
-      <hr>
       <%= yield %>
     </div>
     <div class="col-md-1">
