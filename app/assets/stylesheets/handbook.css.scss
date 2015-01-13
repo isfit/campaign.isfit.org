@@ -27,6 +27,16 @@
     z-index: -1; position:relative
 }
 
+#handbooklogo{
+	width: 10%;
+	height: 10%;
+	position: absolute;
+	visibility: show;
+	left: 20px;
+	top: 300px;
+	z-index: -2;
+}
+
 .header-chapter{
 	margin-top: 150px;
 	font-family: Helvetica;
