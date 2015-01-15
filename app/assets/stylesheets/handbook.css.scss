@@ -13,8 +13,8 @@
 }
 
 .handbook_logo{
-  width: 50%;
-  height: 50%;
+  width: 40%;
+  height: 40%;
   margin-bottom: 2%;
  }
 
@@ -50,6 +50,12 @@
 .sidebar{
   position: fixed;
   right: 5%; 
+}
+
+.line{
+	height: 3px;
+ 	background: #000 url(hr1.gif) no-repeat scroll center;
+ 	width: 100%;
 }
 
 
