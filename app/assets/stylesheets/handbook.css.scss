@@ -1,0 +1,64 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.chapter_section{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.chapter-button{
+	color: #000;
+	font-size: 150%;
+}
+
+.handbook_logo{
+  width: 50%;
+  height: 50%;
+  margin-bottom: 2%;
+ }
+
+.top-bar{
+	background-color: #BF0726;
+	height: 50px;
+	position: absolute;
+    left:0;
+    right:0;
+    z-index: -1; position:relative
+}
+
+#handbooklogo{
+	width: 10%;
+	height: 10%;
+	position: absolute;
+	visibility: show;
+	left: 20px;
+	top: 300px;
+	z-index: -2;
+}
+
+.header-chapter{
+	margin-top: 150px;
+	font-family: Helvetica;
+	font-size: 300%;
+}
+
+.navigation-button{
+	color: #000;
+}
+
+.sidebar{
+  position: fixed;
+  right: 5%; 
+}
+
+
+@font-face {
+  font-family: 'Krungthep'; /*a name to be used later*/
+  src: asset-url('Krungthep.ttf', font); /*URL to font*/
+}
+
+.background-chapter{
+	background-color: #E8E8E8;
+	box-shadow: 0px 0px 50px #888888;
+}
