@@ -9,11 +9,16 @@
 	</div>
 </div>
 <div class="row">
-	<div class="col-md-6 text-center handbook-button">
-		<%= link_to image_tag('logo_handbook.png', class: 'handbook_logo'), controller: 'handbook' %>
-	</div>
-	<div class="col-md-6 text-center globalinfection-button">
-		<%= link_to image_tag("knapp2.png", class: "welcome-index-button"), controller: 'continents' %>
+	<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-5 text-center handbook-button">
+			<%= link_to image_tag('logo_handbook.png'), controller: 'handbook' %>
+		</div>
+		<div class="col-md-2">
+			&nbsp;
+		</div>
+		<div class="col-md-5 text-center globalinfection-button">
+			<%= link_to image_tag("knapp2.png"), controller: 'continents' %>
+		</div>
 	</div>
 </div>
 
