@@ -5,11 +5,11 @@ class Story < ActiveRecord::Base
 	has_many :scores
 	
 	# validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
-	validates :story, length: { maximum: 2000 }, presence: true
+	validates :story, length: { maximum: 1000 }, presence: true
 	validates :title, presence: true
 	validates :happened_in, presence: true, allow_blank: false
 	validates :continent, presence: true, allow_blank: false
-	validates :solution, length: { maximum: 2000 }
+	validates :solution, length: { maximum: 1000 }
 
 
 	def calc_rating(story_id)
