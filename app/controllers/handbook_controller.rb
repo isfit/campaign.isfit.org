@@ -6,5 +6,9 @@ class HandbookController < ApplicationController
 	end
 
 	def show
+		@handbook = Handbook.find(params[:id])
+	end
+
+	def info
 	end
 end

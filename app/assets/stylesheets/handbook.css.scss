@@ -18,6 +18,13 @@
   margin-bottom: 2%;
  }
 
+.handbooklogo_show{
+	content: image-url("logo_handbook_bw.png");
+	position: absolute;
+	width: 10%;
+	z-index: -2;
+}
+
 .top-bar{
 	background-color: #BF0726;
 	height: 50px;
@@ -25,6 +32,10 @@
     left:0;
     right:0;
     z-index: -1; position:relative
+}
+
+.chapter{
+	font: Helvetica;
 }
 
 #handbooklogo{

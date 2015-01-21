@@ -1,25 +1,7 @@
 <div class='container-fluid'>
 	<div class="col-md-10 col-md-offset-1">
 	<div class="row text-center">
-		<%= image_tag "logo_handbook.png", class: "handbook_logo" %>
-	</div>
-	<div class="row text-center">
-		<h2> Chapters </h2>
-		<hr>
-	</div>
-	<div class="row">
-		<div class="col-md-3 text-center h4">
-			<%= link_to "Theme 1", handbook_path(1), class: "chapter-button" %>
-		</div>
-		<div class="col-md-3 text-center h4">
-			<%= link_to "Theme 2", handbook_path(2), class: "chapter-button" %>
-		</div>
-		<div class="col-md-3 text-center h4">
-			<%= link_to "Theme 3", handbook_path(3), class: "chapter-button" %>
-		</div>
-		<div class="col-md-3 text-center h4">
-			<%= link_to "Theme 4", handbook_path(4), class: "chapter-button" %>
-		</div>
+		<%= link_to image_tag("logo_handbook.png", class: "handbook_logo"), {controller: 'handbook', action: 'info'} %>
 	</div>
 </div>
 </div>
