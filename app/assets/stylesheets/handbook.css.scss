@@ -21,8 +21,10 @@
 .handbooklogo_show{
 	content: image-url("logo_handbook_bw.png");
 	position: absolute;
-	width: 10%;
-	z-index: -2;
+	width: 12%;
+	z-index: 2;
+	left: 10%;
+	top: 0px;
 }
 
 .top-bar{
@@ -58,13 +60,22 @@
 	color: #000;
 }
 
+.navigation-button:hover{
+	background-color: #BF0726;
+}
+
+.hoverlist li:hover{
+	background-color: #BF0726 !important;
+}
+
 .sidebar{
-  position: fixed;
-  right: 10%;
+ 	position: fixed;
+ 	right: 10%;
 }
 
 .line{
 	height: 3px;
+	border-radius: 0.1px;
  	background: #000 url(hr1.gif) no-repeat scroll center;
  	width: 100%;
 }

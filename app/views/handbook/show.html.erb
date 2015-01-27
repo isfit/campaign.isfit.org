@@ -1,5 +1,5 @@
-<div class="row top-bar"></div>
-<div class="handbooklogo_show"></div>
+<div class="row top-bar" id="top"></div>
+<a href="/handbook"><div class="handbooklogo_show"></div></a>
 
 
 
@@ -8,23 +8,23 @@
 		<div class="row">
 			<div class="col-md-8 col-md-offset-1">
 				<section id="become">
-					<div id="welcome" class="header-chapter"><%= @handbook.name %></div>
-					<div class="col-md-8 line"></div>
-					<h2>Intro</h2>
+					<div class="header-chapter"><%= @handbook.name %></div>
+					<div class="col-md-8 line" id="intro" ></div>
+					<h2>Introduction</h2>
 					<p>
 						<%= simple_format @handbook.intro %>
 					</p>
 
 				</section>
-				<section id="what" class="chapter_section">
-					<h2>What</h2>
+				<section id="stories">
+					<h2>Stories</h2>
 					<p>
 						<%= simple_format @handbook.conclusion %>
 					</p>
 					
 				</section>
-				<section id="why" class="chapter_section">
-					<h2>Why</h2>
+				<section id="discussion">
+					<h2>Discussion</h2>
 					
 					<p>
 						<%= simple_format @handbook.conclusion %>
@@ -34,12 +34,11 @@
 			</div>	
 			<div class="col-md-2 sidebar visible-lg">
 				<nav role="navigation">
-		              <ul class="nav nav-left">
-		                <li><a href="#welcome"></i><div class="navigation-button"><b>Intro</b></div></a></li>
-		                <li><a href="#become"></i><div class="navigation-button"><b>History</b></div></a></li>
-		                <li><a href="#what"></i><div class="navigation-button"><b>Actions</b></div></a></li>
-		                <li><a href="#why"></i><div class="navigation-button"><b>Stories</b></div></a></li>
-		                <li><a href="#do"></i><div class="navigation-button"><b>Conclusion</b></div></a></li>
+		              <ul class="nav nav-left hoverlist">
+		                <li><a href="#top"></i><div class="navigation-button"><b>Top of the site</b></div></a></li>
+		                <li><a href="#intro"></i><div class="navigation-button"><b>Introduction</b></div></a></li>
+		                <li><a href="#stories"></i><div class="navigation-button"><b>Stories</b></div></a></li>
+		                <li><a href="#discussion"></i><div class="navigation-button"><b>Discussion</b></div></a></li>
 					</ul>
 		        </nav>
 			</div>
