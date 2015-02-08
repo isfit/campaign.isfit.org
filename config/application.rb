@@ -13,7 +13,7 @@ module Campaign
       :address              => "isfit.org",
       :port                 => 587,
       :domain               => "isfit.org",
-      :enable_starttls_auto => true,
+      :enable_starttls_auto => false,
       :openssl_verify_mode  => 'none'
     }
 
