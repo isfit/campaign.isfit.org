@@ -35,7 +35,7 @@ GEM
       sass (~> 3.2)
     bootstrap_form (2.2.0)
     builder (3.2.2)
-    capistrano (3.3.5)
+    capistrano (3.2.1)
       capistrano-stats (~> 1.1.0)
       i18n
       rake (>= 10.0.0)
