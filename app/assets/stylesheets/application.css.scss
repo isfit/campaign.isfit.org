@@ -37,14 +37,19 @@
  }
 
  .handbook-button img{
-  margin-top: -15px;
+  margin-top: 15px;
   width: 100%;
   height: auto;
  }
 
  .globalinfection-button img{
+  margin-top: 70px;
   width: 100%;
   height: auto;
+ }
+
+ .padding_top_frontpage{
+  padding-top: 100px;
  }
 
 @font-face {
