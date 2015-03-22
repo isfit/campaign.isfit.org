@@ -12,14 +12,14 @@
 					<div class="col-md-8 line" id="intro" ></div>
 					<h2>Introduction</h2>
 					<p>
-						<%= simple_format @handbook.intro %>
+						<%= @handbook.intro.html_safe %>
 					</p>
 
 				</section>
 				<section id="stories">
 					<h2>Stories</h2>
 					<p>
-						<%= simple_format @handbook.conclusion %>
+						<%= @handbook.stories.html_safe %>
 					</p>
 					
 				</section>
@@ -27,7 +27,7 @@
 					<h2>Discussion</h2>
 					
 					<p>
-						<%= simple_format @handbook.conclusion %>
+						<%= @handbook.conclusion.html_safe %>
 					</p>
 
 				</section>
