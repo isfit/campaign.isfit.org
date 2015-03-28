@@ -1,0 +1,47 @@
+<div class="row top-bar" id="top"></div>
+<a href="/handbook"><div class="handbooklogo_show"></div></a>
+
+
+
+<div class='container-fluid'>
+	<div class="col-md-10 col-md-offset-1 background-chapter">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-1 chapter-content">
+				<section id="become">
+					<div class="header-chapter"><%= @handbook.name %></div>
+					<div class="col-md-8 line" id="intro" ></div>
+					<h2>Introduction</h2>
+					<p class="override-inline-font">
+						<%= @handbook.intro.html_safe %>
+					</p>
+
+				</section>
+				<section id="stories">
+					<h2>Stories</h2>
+					<p class="override-inline-font">
+						<%= @handbook.stories.html_safe %>
+					</p>
+					
+				</section>
+				<section id="discussion">
+					<h2>Discussion</h2>
+					
+					<p class="override-inline-font">
+						<%= @handbook.conclusion.html_safe %>
+					</p>
+
+				</section>
+			</div>	
+			<div class="col-md-2 sidebar visible-lg">
+				<nav role="navigation">
+		              <ul class="nav nav-left hoverlist">
+		                <a href="#top"><div class="navigation-button"><li></i><b>Top of the site</b></li></div></a>
+		                <a href="#intro"><div class="navigation-button"><li></i><b>Introduction</b></li></div></a>
+		                <a href="#stories"><div class="navigation-button"><li></i><b>Stories</b></li></div></a>
+		                <a href="#discussion"><div class="navigation-button"><li></i><b>Discussion</b></li></div></a>
+					</ul>
+		        </nav>
+			</div>
+		</div>
+	</div>
+</div>

@@ -27,7 +27,7 @@
  .welcome-index-button{
  	width: 130%;
  	height: 130%;
- }
+ } 
 
  .footer{
   position: static;
@@ -41,9 +41,25 @@
   bottom: 0;
  }
 
- @font-face {
-    font-family: 'Tondu'; /*a name to be used later*/
-    src: asset-url('Tondu.ttf', font); /*URL to font*/
+ .handbook-button img{
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+ }
+
+ .globalinfection-button img{
+  margin-top: 70px;
+  width: 100%;
+  height: auto;
+ }
+
+ .padding_top_frontpage{
+  padding-top: 100px;
+ }
+
+@font-face {
+  font-family: 'Tondu'; /*a name to be used later*/
+  src: asset-url('Tondu.ttf', font); /*URL to font*/
 }
 h1, h2, h3, h4, h5{
 	font-family: tondu;
@@ -51,6 +67,7 @@ h1, h2, h3, h4, h5{
 .go-back-button-info{
 	color: #000;
 }
+
 .go-back-button-info:hover{
 	color: #C27975;
 }
@@ -63,15 +80,15 @@ h1, h2, h3, h4, h5{
  }
 
 @media screen and (max-width: 750px){
-.welcome-index-button{
-  width:auto;
-  height: auto;
+  .welcome-index-button{
+    width:auto;
+    height: auto;
+  }
 }
- }
 
 @media screen and (max-width: 992px){
-.welcome-index-button{
-  width: auto;
-  height: auto;
+  .welcome-index-button{
+    width: auto;
+    height: auto;
+  }
 }
- }

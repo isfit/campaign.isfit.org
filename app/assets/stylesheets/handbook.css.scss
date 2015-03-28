@@ -1,0 +1,131 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.chapter_section{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.chapter-button{
+	color: #000;
+	font-size: 150%;
+}
+
+.handbook_logo{
+  width: 40%;
+  height: 40%;
+  margin-bottom: 2%;
+ }
+
+ .chapter-content{
+ 	padding-bottom: 50px;
+ }
+ .chapter-content img{
+   width:100%;
+ }
+
+.handbooklogo_show{
+	content: image-url("logo_handbook_bw.png");
+	position: absolute;
+	width: 12%;
+	z-index: 2;
+	left: 10%;
+	top: 0px;
+	min-width: 95px;
+	max-width: 180px;
+}
+
+.top-bar{
+	background-color: #BF0726;
+	height: 50px;
+	position: absolute;
+    left:0;
+    right:0;
+    z-index: -1; position:relative
+}
+
+.chapter{
+	font: Helvetica;
+}
+
+#handbooklogo{
+	width: 10%;
+	height: 10%;
+	position: absolute;
+	visibility: show;
+	left: 20px;
+	top: 300px;
+	z-index: -2;
+}
+
+.header-chapter{
+	margin-top: 150px;
+	font-family: Helvetica;
+	font-size: 300%;
+}
+
+.navigation-button{
+	color: #000;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	color: black;
+}
+
+.nav a:hover{
+	text-decoration: none;
+}
+
+
+.navigation-button:hover{
+	background-color: #BF0726
+}
+
+.hoverlist{
+	padding-top: 220px;
+}
+
+.nav.pull-left > li > a:hover {
+    background-color: #BF0726;
+}
+
+.chapter-links{
+	text-decoration: none;
+}
+
+.info{
+	padding-top: 100px;
+	padding-bottom:	50px;
+}
+
+.sidebar{
+ 	position: fixed;
+ 	right: 10%;
+}
+
+.line{
+	height: 3px;
+	border-radius: 0.1px;
+ 	background: #000 url(hr1.gif) no-repeat scroll center;
+ 	width: 100%;
+}
+
+
+@font-face {
+  font-family: 'Krungthep'; /*a name to be used later*/
+  src: asset-url('Krungthep.ttf', font); /*URL to font*/
+}
+
+.background-chapter{
+	background-color: #E8E8E8;
+	box-shadow: 0px 0px 50px #888888;
+}
+
+span[style]{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.428571429 !important;
+  color: #333333 !important;
+  font-variant:normal !important;
+}

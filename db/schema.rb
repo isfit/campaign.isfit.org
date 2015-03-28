@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141007001810) do
+ActiveRecord::Schema.define(version: 20150325160919) do
 
   create_table "continents", force: true do |t|
     t.string   "name"
@@ -25,6 +25,16 @@ ActiveRecord::Schema.define(version: 20141007001810) do
     t.string  "name",                            null: false
     t.integer "region_id",                       null: false
     t.string  "code",      limit: 4,             null: false
+  end
+
+  create_table "handbooks", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "intro"
+    t.text     "conclusion"
+    t.string   "name"
+    t.text     "stories"
+    t.string   "image_file_name"
   end
 
   create_table "scores", force: true do |t|

@@ -7,17 +7,18 @@
   <meta name="description" content="Share your story about a corrupt incident.">
   <meta name="keywords" content="student, corrupt, corruption, campaign, isfit, global infection, the global infection">
   <meta property="og:title" content="Share your story about corruption" >
-  <meta property="og:site_name" content="The Global Infection" >
-  <meta property="og:description" content="The vision behind this campaign is to raise awareness of corruption, arouse curiosity and challenge young people’s attitude towards the topic. A corrupt act is to abuse the power entrusted in you for your own gain (definition by Transparency International), and it inflicts people in all corners of the world, of all ages. Corruption is not always easy to spot, as it is a complex phenomenon with many grey areas. With this campaign we hope to provide relevant and important information about corruption and shed light on the many different shades of it. " >
-  <meta property="og:image" content="<%= image_url("knapp1.png") %>" >
+  <meta property="og:site_name" content="ISFIT Handbook of anti-corruption" >
+  <meta property="og:description" content=" ====== INFORMATION ABOUT CORRUPTION HANDBOOK =====  " >
+  <meta property="og:image" content="<%= image_url("logo_handbook.png") %>" >
   
   <%= favicon_link_tag 'favicon.ico' %>
-  <title>The Global Infection</title>
+  <title>Corruption Handbook</title>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   
+
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -32,22 +33,33 @@
 
   <%= yield :head %>
 </head>
-<body>
-	<div class='container'>
-    <div class="col-md-1">
-    </div>
-	  <div class="col-md-10">
-      <div class="container-fluid">
-        <div class="row text-center">
-          <%= link_to image_tag("header_theglobalinfection.png", class: "banner"), controller: "continents" %>
-        </div>
-      </div>
-      <hr>
+<body data-spy="scroll" data-target="sidebar">
       <%= yield %>
+
+  <div class="row text-center chapter">
+    <h2> Chapters </h2>
+    <hr>
+  </div>
+  <div class="row">
+    <div class="col-md-2 col-md-offset-1 text-center h4">
+      <%= link_to "#{Handbook.find(1).name}", handbook_path(1), class: "chapter-button" %>
     </div>
-    <div class="col-md-1">
+    <div class="col-md-2 text-center h4 chapter-links">
+      <%= link_to "#{Handbook.find(2).name}", handbook_path(2), class: "chapter-button" %>
     </div>
-	</div>
+    <div class="col-md-2 text-center h4">
+      <%= link_to "#{Handbook.find(3).name}", handbook_path(3), class: "chapter-button" %>
+    </div>
+    <div class="col-md-2 text-center h4">
+      <%= link_to "#{Handbook.find(4).name}", handbook_path(4), class: "chapter-button" %>
+    </div>
+    <div class="col-md-3 text-center h4">
+      <%= link_to "Isfit parliament", handbook_path(5), class: "chapter-button" %>
+    </div>
+  </div>
+
+
+
   <div class="footer">
     <div class="container">
       <div class="text-center">

@@ -1,6 +1,6 @@
 
 <div class="row text-center">
-	<div class="col-md-8 col-md-offset-2">
+	<div class="col-md-8 col-md-offset-2 padding_top_frontpage">
 		<%= flash_messages %>
 		<div class="embed-responsive embed-responsive-16by9">
 			<iframe src="//player.vimeo.com/video/106489270" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -8,12 +8,17 @@
 		</div>
 	</div>
 </div>
-<div class="row text-center">
-	<div class="col-md-2 col-md-offset-3 text-center">
-		<h1><%= link_to image_tag("knapp1.png", class: "welcome-index-button"), controller: 'stories', action: "new" %></h1>
-	</div>
-	<div class="col-md-2 col-md-offset-2 text-center">
-		<h1><%= link_to image_tag("knapp2.png", class: "welcome-index-button"), controller: 'continents' %></h1>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-5 text-center handbook-button">
+			<%= link_to image_tag('logo_handbook.png'), controller: 'handbook' %>
+		</div>
+		<div class="col-md-2">
+			&nbsp;
+		</div>
+		<div class="col-md-5 text-center globalinfection-button">
+			<%= link_to image_tag("globalinfection_frontpage_button.png"), controller: 'continents' %>
+		</div>
 	</div>
 </div>
 
