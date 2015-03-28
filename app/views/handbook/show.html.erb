@@ -11,14 +11,14 @@
 					<div class="header-chapter"><%= @handbook.name %></div>
 					<div class="col-md-8 line" id="intro" ></div>
 					<h2>Introduction</h2>
-					<p>
+					<p class="override-inline-font">
 						<%= @handbook.intro.html_safe %>
 					</p>
 
 				</section>
 				<section id="stories">
 					<h2>Stories</h2>
-					<p>
+					<p class="override-inline-font">
 						<%= @handbook.stories.html_safe %>
 					</p>
 					
@@ -26,7 +26,7 @@
 				<section id="discussion">
 					<h2>Discussion</h2>
 					
-					<p>
+					<p class="override-inline-font">
 						<%= @handbook.conclusion.html_safe %>
 					</p>
 

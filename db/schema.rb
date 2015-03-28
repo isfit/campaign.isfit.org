@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150121193628) do
+ActiveRecord::Schema.define(version: 20150325160919) do
 
   create_table "continents", force: true do |t|
     t.string   "name"
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 20150121193628) do
     t.text     "intro"
     t.text     "conclusion"
     t.string   "name"
+    t.text     "stories"
+    t.string   "image_file_name"
   end
 
   create_table "scores", force: true do |t|
