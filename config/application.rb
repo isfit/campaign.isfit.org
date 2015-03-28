@@ -8,12 +8,11 @@ Bundler.require(*Rails.groups)
 
 module Campaign
   class Application < Rails::Application
-
+    config.action_mailer.delivery_method = :smtp
     ActionMailer::Base.smtp_settings = {
       :address              => "isfit.org",
-      :port                 => 587,
       :domain               => "isfit.org",
-      :enable_starttls_auto => true,
+      :enable_starttls_auto => false,
       :openssl_verify_mode  => 'none'
     }
 
